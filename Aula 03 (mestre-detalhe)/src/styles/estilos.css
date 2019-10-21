@@ -1,0 +1,92 @@
+@charset "UTF-8";
+/**No Sass, as variáveis
+    inicia  com $
+
+*/
+@font-face {
+  font-family: "decorativa";
+  src: url(../fonts/LobsterTwo-Regular.ttf);
+}
+@font-face {
+  font-family: "padrao";
+  src: url(../fonts/SourceSansPro-Regular.ttf);
+}
+body {
+  margin: 0;
+}
+
+#header {
+  background-color: #2c82c9;
+  padding: 10px 20px;
+  width: 100%;
+  margin-bottom: 5px;
+}
+#header * {
+  display: inline;
+  vertical-align: middle;
+}
+
+img {
+  width: 60px;
+  margin-right: 10px;
+}
+
+h1 {
+  font-family: "decorativa";
+  color: white;
+}
+
+#formularioContato {
+  padding: 10px;
+  border: 1px solid #0080ff;
+  width: 95%;
+  margin: auto;
+}
+#formularioContato label, #formularioContato input {
+  display: block;
+  font-family: "padrao";
+}
+#formularioContato input {
+  margin-bottom: 10px;
+}
+#formularioContato input[type=text], #formularioContato input[type=email], #formularioContato input[type=tel], #formularioContato input[type=date] {
+  height: 25px;
+  font-size: 100%;
+  /*Daqui para baixo e opcional*/
+  border-radius: 5px;
+  border: 1px solid #aaa;
+  padding-left: 5px;
+}
+#formularioContato input[type=text] {
+  width: 400px;
+}
+#formularioContato input[type=email] {
+  width: 300px;
+}
+#formularioContato input[type=tel] {
+  width: 140px;
+}
+#formularioContato input[type=submit] {
+  border-radius: 5px;
+  padding: 10px 20px;
+  border: 1px solid #aaa;
+  background-color: blue;
+  color: white;
+  border: none;
+}
+
+#listagemContatos {
+  margin-top: 20px;
+}
+#listagemContatos table {
+  border-collapse: collapse;
+  margin: auto;
+  width: 95%;
+  font-family: "padrao";
+}
+#listagemContatos table thead {
+  background-color: #2c82c9;
+  color: white;
+}
+
+/*# sourceMappingURL=estilos.css.map */

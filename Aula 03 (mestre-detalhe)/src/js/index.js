@@ -14,7 +14,26 @@ var contatos = [
         dataNascimento:'29/02/2001'
 
 
-    }
+    },
+    {
+
+        nome: 'Lucas Paniago',
+        telefone: '67 996666666',
+        email: 'LucasPaniago@gmail.com',
+        dataNascimento:'23/05/1987'
+
+
+    },
+    {
+
+        nome: 'Lucas Negri',
+        telefone: '67 991106112',
+        email: 'Lucas@gmail.com',
+        dataNascimento:'22/07/1985'
+
+
+    },
+    
     
     
 ];

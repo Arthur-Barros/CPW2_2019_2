@@ -42,7 +42,8 @@ h1 {
   width: 95%;
   margin: auto;
 }
-#formularioContato label, #formularioContato input {
+#formularioContato label,
+#formularioContato input {
   display: block;
   font-family: "padrao";
 }
@@ -80,13 +81,37 @@ h1 {
 }
 #listagemContatos table {
   border-collapse: collapse;
-  margin: auto;
+  margin: 0px auto 50px auto;
   width: 95%;
   font-family: "padrao";
 }
 #listagemContatos table thead {
   background-color: #2c82c9;
   color: white;
+}
+#listagemContatos table tr:hover td {
+  background-color: #eeeeee;
+}
+#listagemContatos table tr:nth-child(even) {
+  background-color: #e4f1fe;
+}
+#listagemContatos table tr td {
+  font-size: 90%;
+}
+#listagemContatos table tr td,
+#listagemContatos table tr th {
+  text-align: center;
+  padding: 5px 0px;
+}
+#listagemContatos table tr td:first-child,
+#listagemContatos table tr th:first-child {
+  text-align: left;
+  padding-left: 5px;
+}
+#listagemContatos table tr td:last-child,
+#listagemContatos table tr th:last-child {
+  text-align: right;
+  padding-right: 5px;
 }
 
 /*# sourceMappingURL=estilos.css.map */

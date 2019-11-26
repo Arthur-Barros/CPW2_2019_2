@@ -4,43 +4,26 @@
  * (in memory DB)
  */
 
-var contatos = [
 
-    {
+// Cria o objeto
 
-        nome: 'Arthur Barros',
-        telefone: '67 991106112',
-        email: 'arthur@gmail.com',
-        dataNascimento: '29/02/2001'
+let arthur = new Contato('Arthur Barros', '67 991106112', 'arthur@gmail.com', '29/02/2001');
+console.log(arthur);
 
+let lucas = new Contato('Lucas Paniago', '67 996666666', 'LucasPaniago@gmail.com', '23/05/1987');
 
-    },
-    {
+let lucasn = new Contato('Lucas Negri', '67 991106112', 'Lucas@gmail.com', '22/07/1985');
 
-        nome: 'Lucas Paniago',
-        telefone: '67 996666666',
-        email: 'LucasPaniago@gmail.com',
-        dataNascimento: '23/05/1987'
+var contatos = [arthur, lucas,lucasn];
 
 
-    },
-    {
-
-        nome: 'Lucas Negri',
-        telefone: '67 991106112',
-        email: 'Lucas@gmail.com',
-        dataNascimento: '22/07/1985'
-
-
-    },
-
-
-
-];
-
-
-renderizarTabelaContatos(contatos);
-renderizarCardsContatos(contatos);
+/**
+ * Instancia o objeto da
+ * ContatoView
+ */
+var contatoView = new ContatoView(contatos);
+contatoView.renderizarTabelaContatos();
+contatoView.renderizarCardsContatos();
 
 
 
@@ -48,7 +31,7 @@ renderizarCardsContatos(contatos);
  * recuperar algo que ta na minha página.
  * Cria um apelido 
  * para função querySelector
- */
+ 
 
 //var sel = document.querySelector;
 
@@ -61,7 +44,7 @@ function salvarContato(event) {
      * $ --> document.querySelector
      * val > value
      * 
-     */
+     
 
     //recupera os valor do formuário
     //let nome = document.querySelector('#nome').nodeValue;
@@ -99,7 +82,7 @@ function renderizarTabelaContatos(listaContatos) {
         /**
          * Cria tabela
          * 
-         */
+         
 
         let tabela = document.createElement('table');
 
@@ -129,7 +112,7 @@ function criaCabecalhoTabela() {
     /**
        * Cria o cabeçalho da tabela
        * 
-       */
+       
     let cabecalho = document.createElement('thead');
 
     let linhaCabecalho = document.createElement('tr');
@@ -169,14 +152,14 @@ function criarCorpoTabela(listaContatos) {
     /**
      * Cria Corpo da tabela
      *  
-     */
+     
 
     let corpoTabela = document.createElement('tbody');
 
 
     /**
      * Cria a linha de contatos
-     */
+     
 
     for (let i = 0; i < listaContatos.length; i++) {
 
@@ -221,7 +204,7 @@ function renderizarCardsContatos(listaContatos) {
 
         /**
          * Ao invés de usar um loop, utilizaremos a função forEach
-         */
+         
 
 
         listaContatos.forEach(function (contato) {
@@ -259,14 +242,14 @@ function filtrarContatos() {
 
         /**
          * Filtra os contatos de acordo com o texto digitado pelo usuário no campo de filtro
-         */
+         
         let contatosFiltrados = contatos.filter(function(contato){
             let nome = contato.nome.toLowerCase();
             let email = contato.email.toLowerCase();
 
             /**
              * Se o nome ou e-mail do contato conter o filtro do usuário, retorno o contato
-             */
+             
 
             if(nome.includes(filtro)|| email.includes(filtro)){
                 return contato;
@@ -278,3 +261,5 @@ function filtrarContatos() {
 
     }
 }
+
+*/

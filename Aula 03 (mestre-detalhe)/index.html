@@ -25,38 +25,40 @@
     <div id="formularioContato">
         <!--event para evitar de carregar -->
         <form onsubmit="salvarContato(event)">
-            <label for="nome">Nome</label>
-            <input required id="nome" name="nome" type="text">
+            <form onsubmit="contatoView.salvarContato(event)">
+                <label for="nome">Nome</label>
+                <input required id="nome" name="nome" type="text">
 
-            <label for="telefone">Telefone</label>
-            <input pattern="\([0-9]{2}\) [0-9]{5}-[0-9]{4}" placeholder="(99) 99999-9999" type="tel" name="telefone"
-                id="telefone">
+                <label for="telefone">Telefone</label>
+                <input pattern="\([0-9]{2}\) [0-9]{5}-[0-9]{4}" placeholder="(99) 99999-9999" type="tel" name="telefone"
+                    id="telefone">
 
-            <label for="email">E-mail</label>
-            <input type="email" name="email" id="email">
+                <label for="email">E-mail</label>
+                <input type="email" name="email" id="email">
 
-            <label for="dataNascimento">Data de nascimento</label>
-            <input type="date" name="dataNascimento" id="dataNascimento">
+                <label for="dataNascimento">Data de nascimento</label>
+                <input type="date" name="dataNascimento" id="dataNascimento">
 
 
-            <input type="submit" value="Salvar">
+                <input type="submit" value="Salvar">
 
-        </form>
+            </form>
 
     </div>
 
     <input onkeyup="filtrarContatos()" placeholder="Digite o seu nome ou e-mail" type="text" id="filtro">
+    <input onkeyup="contatoView.filtrarContatos()" placeholder="Digite o nome ou e-mail" type="text" id="filtro">
 
 
-    
     <div id="cardsContatos"></div>
     <div id="tabelaContatos"></div>
-    
 
 
 
 
 
+    <script src="src/js/models/Contato.js"></script>
+    <script src="src/js/views/ContatoView.js"></script>
     <script src="src/js/index.js"></script>
     <script src="src/js/mascara.js"></script>
 
